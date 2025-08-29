@@ -1,0 +1,72 @@
+syntax = "proto3";
+
+package user_manager;
+option go_package = "libgo/";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+service UserService {
+    rpc CreateUser (CreateUserRequest) returns (User) {}
+    rpc GetUser (GetUserRequest) returns (User) {}
+    rpc UpdateUser (UpdateUserRequest) returns (User) {}
+    rpc DeleteUser (DeleteUserRequest) returns (DeleteUserResponse) {}
+    rpc AuthenticateUser (AuthRequest) returns (AuthResponse) {}
+    rpc ValidateUser (ValidateUserRequest) returns (ValidateUserResponse) {}
+}
+
+message User {
+    string id = 1;
+    string username = 2;
+    string email = 3;
+    string password_hash = 4;
+    google.protobuf.Timestamp created_at = 5;
+    optional google.protobuf.Timestamp updated_at = 6;
+}
+
+message CreateUserRequest {
+    string username = 1;
+    string email = 2;
+    string password = 3;
+}
+
+message GetUserRequest {
+    string id = 1;
+}
+
+message UpdateUserRequest {
+    string id = 1;
+    optional string username = 2;
+    optional string email = 3;
+    optional string password = 4;
+}
+
+message DeleteUserRequest {
+    string id = 1;
+}
+
+message DeleteUserResponse {
+    bool success = 1;
+}
+
+message AuthRequest {
+    string username = 1;
+    string password = 2;
+}
+
+message AuthResponse {
+    bool success = 1;
+    optional string token = 2;
+    optional string error_message = 3;
+}
+
+message ValidateUserRequest {
+    string token = 1;
+}
+
+message ValidateUserResponse {
+    bool valid = 1;
+    optional string user_id = 2;
+    optional string username = 3;
+    optional string email = 4;
+}
