@@ -1,0 +1,44 @@
+# ecommerce.products.manager.migrations
+
+This project manages database migrations for Products Manager.
+
+## Environment Variables
+
+Set the following environment variables before running the migrations.  
+You can initialize them easily in a Bash shell with:
+
+```bash
+set -a && source .env
+```
+
+Example `.env` file:
+
+```env
+DB_HOST=localhost
+DB_USER=YOUR_USER
+DB_PASSWORD=YOUR_PASSWORD
+DB_NAME=YOUR_DB_NAME
+DB_PORT=5432
+DB_INSECURE=true
+
+MAX_IDLE_CONN=1
+MAX_OPEN_CONN=1
+```
+
+## Usage
+
+1. Clone the repository.
+2. Create and configure your `.env` file with the required variables.
+3. Initialize the environment variables in your shell:
+    ```bash
+    set -a && source .env
+    ```
+4. Run the migrations as described in the project documentation.
+5. Run main.go
+    ```bash
+    go run src/main.go
+    ```
+
+## License
+
+This project is licensed under the MIT License.
