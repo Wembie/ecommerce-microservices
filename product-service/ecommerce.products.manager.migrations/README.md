@@ -1,4 +1,4 @@
-# eecommerce.products.manager.migrations
+# ecommerce.products.manager.migrations
 
 This project manages database migrations for Products Manager.
 
