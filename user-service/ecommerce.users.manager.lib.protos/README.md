@@ -68,6 +68,10 @@ v1/
 ## Usage
 
 ### Go Client
+```bash
+go get -v github.com/Wembie/ecommerce.users.manager.lib.protos/v1/libgo
+```
+
 ```go
 conn, _ := grpc.Dial("localhost:50051", grpc.WithInsecure())
 client := pb.NewUserServiceClient(conn)
@@ -81,7 +85,10 @@ user, _ := client.CreateUser(context.Background(), &pb.CreateUserRequest{
 
 ### Python Client
 ```python
-channel = grpc.insecure_channel('localhost:50051')
+from grpc import insecure_channel
+from users_manager import users_pb2_grpc, users_pb2
+
+channel = insecure_channel('localhost:50051')
 stub = users_pb2_grpc.UserServiceStub(channel)
 
 response = stub.CreateUser(users_pb2.CreateUserRequest(

@@ -1,0 +1,107 @@
+version: "3.9"
+
+x-db-env: &db-env
+  DB_HOST: "db"
+  DB_PORT: "5432"
+  DB_USER: "app_user"
+  DB_PASSWORD: "app_password"
+  DB_NAME: "ecommerce_db"
+  DB_INSECURE: "true"
+  MAX_IDLE_CONN: "10"
+  MAX_OPEN_CONN: "10"
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: ecommerce-db
+    environment:
+      POSTGRES_USER: "app_user"
+      POSTGRES_PASSWORD: "app_password"
+      POSTGRES_DB: "ecommerce_db"
+    ports:
+      #- "5432:5432"
+      - "5434:5432"
+    volumes:
+      - ecommerce-db-data:/var/lib/postgresql/data
+      - ./init_database.sql:/docker-entrypoint-initdb.d/init_database.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U app_user -d ecommerce_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  user-migrations:
+    build:
+      context: ./user-service/ecommerce.users.manager.migrations
+      dockerfile: Dockerfile
+    environment:
+      <<: *db-env
+    depends_on:
+      db:
+        condition: service_healthy
+
+  product-migrations:
+    build:
+      context: ./product-service/ecommerce.products.manager.migrations
+      dockerfile: Dockerfile
+    environment:
+      <<: *db-env
+    depends_on:
+      db:
+        condition: service_healthy
+
+  order-migrations:
+    build:
+      context: ./order-service/ecommerce.orders.manager.migrations
+      dockerfile: Dockerfile
+    environment:
+      <<: *db-env
+    depends_on:
+      db:
+        condition: service_healthy
+
+  user-service:
+    build:
+      context: ./user-service/ecommerce.users.manager
+      dockerfile: Dockerfile
+    ports:
+      - "50051:50051"
+    environment:
+      <<: *db-env
+      APP_NAME: "users-manager"
+      APP_PORT: "50051"
+      JWT_SECRET: "xxxxx"
+    depends_on:
+      user-migrations:
+        condition: service_completed_successfully
+
+  # product-service:
+  #   build:
+  #     context: ./product-service/ecommerce.products.manager
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "8080:8080"
+  #   environment:
+  #     <<: *db-env
+  #     APP_NAME: "products-manager"
+  #     APP_PORT: "8080"
+  #   depends_on:
+  #     product-migrations:
+  #       condition: service_completed_successfully
+
+  # order-service:
+  #   build:
+  #     context: ./order-service/ecommerce.orders.manager
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "8081:8081"
+  #   environment:
+  #     <<: *db-env
+  #     APP_NAME: "orders-manager"
+  #     APP_PORT: "8081"
+  #   depends_on:
+  #     order-migrations:
+  #       condition: service_completed_successfully
+
+volumes:
+  ecommerce-db-data:
