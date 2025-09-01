@@ -17,6 +17,7 @@ type Config struct {
 	MaxOpenConnection          	int
 	ApplicationName             string
 	AppPort                     string
+	JWTSecret                   string
 }
 
 func GetConfig() *Config {
@@ -40,6 +41,7 @@ func GetConfig() *Config {
 		MaxOpenConnection: 	maxOpenConnection,
 		ApplicationName: 	getEnvOrPanic("APP_NAME"),
 		AppPort:      		getEnvOrPanic("APP_PORT"),
+		JWTSecret:      	getEnvOrPanic("JWT_SECRET"),
 	}
 }
 

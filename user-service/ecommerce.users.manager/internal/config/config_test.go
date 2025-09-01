@@ -21,6 +21,7 @@ func TestGetConfig(t *testing.T) {
 			"MAX_OPEN_CONN": "15",
 			"APP_NAME":      "test-app",
 			"APP_PORT":      "50051",
+			"JWT_SECRET":    "testsecret",
 		}
 
 		setEnvVars(t, envVars)
@@ -49,6 +50,7 @@ func TestGetConfig(t *testing.T) {
 			"DB_NAME":     "testdb",
 			"APP_NAME":    "test-app",
 			"APP_PORT":    "50051",
+			"JWT_SECRET":    "testsecret",
 		}
 
 		setEnvVars(t, envVars)

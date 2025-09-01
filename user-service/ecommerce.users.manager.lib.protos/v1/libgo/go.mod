@@ -1,4 +1,4 @@
-module ecommerce.users.manager.lib.protos/v1/libgo
+module github.com/Wembie/ecommerce.users.manager.lib.protos/v1/libgo
 
 go 1.23.2
 
