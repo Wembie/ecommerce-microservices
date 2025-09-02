@@ -1,5 +1,3 @@
-version: "3.9"
-
 x-db-env: &db-env
   DB_HOST: "db"
   DB_PORT: "5432"
@@ -30,9 +28,9 @@ services:
       timeout: 5s
       retries: 5
 
-  user-migrations:
+  migrations:
     build:
-      context: ./user-service/ecommerce.users.manager.migrations
+      context: ecommerce.managers.migrations
       dockerfile: Dockerfile
     environment:
       <<: *db-env
@@ -40,29 +38,9 @@ services:
       db:
         condition: service_healthy
 
-  product-migrations:
+  user-manager:
     build:
-      context: ./product-service/ecommerce.products.manager.migrations
-      dockerfile: Dockerfile
-    environment:
-      <<: *db-env
-    depends_on:
-      db:
-        condition: service_healthy
-
-  order-migrations:
-    build:
-      context: ./order-service/ecommerce.orders.manager.migrations
-      dockerfile: Dockerfile
-    environment:
-      <<: *db-env
-    depends_on:
-      db:
-        condition: service_healthy
-
-  user-service:
-    build:
-      context: ./user-service/ecommerce.users.manager
+      context: ecommerce.users.manager
       dockerfile: Dockerfile
     ports:
       - "50051:50051"
@@ -70,9 +48,9 @@ services:
       <<: *db-env
       APP_NAME: "users-manager"
       APP_PORT: "50051"
-      JWT_SECRET: "xxxxx"
+      JWT_SECRET: "your_jwt_secret"
     depends_on:
-      user-migrations:
+      migrations:
         condition: service_completed_successfully
 
   # product-service:

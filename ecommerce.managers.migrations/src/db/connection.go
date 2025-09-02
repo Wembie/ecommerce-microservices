@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"time"
 
-	"ecommerce.orders.manager.migrations/src/config"
+	"ecommerce.managers.migrations/src/config"
 
 	"github.com/pressly/goose/v3"
 	"github.com/uptrace/bun"
@@ -25,7 +25,7 @@ func GetConnection() *bun.DB {
 		pgdriver.WithUser(config.Config.DBUser),
 		pgdriver.WithPassword(config.Config.DBPassword),
 		pgdriver.WithDatabase(config.Config.DBName),
-		pgdriver.WithApplicationName("ecommerce.orders.manager.migrations"),
+		pgdriver.WithApplicationName("ecommerce.managers.migrations"),
 		pgdriver.WithInsecure(config.Config.DBInsecure),
 	)
 

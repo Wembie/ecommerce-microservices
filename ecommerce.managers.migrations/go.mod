@@ -1,4 +1,4 @@
-module ecommerce.products.manager.migrations
+module ecommerce.managers.migrations
 
 go 1.23.2
 
