@@ -3,8 +3,8 @@ package main
 import (
 	"embed"
 
-	"ecommerce.products.manager.migrations/src/config"
-	"ecommerce.products.manager.migrations/src/db"
+	"ecommerce.managers.migrations/src/config"
+	"ecommerce.managers.migrations/src/db"
 	"go.uber.org/zap"
 )
 

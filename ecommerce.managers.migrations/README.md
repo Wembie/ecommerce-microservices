@@ -1,4 +1,4 @@
-# ecommerce.orders.manager.migrations
+# ecommerce.managers.migrations
 
 This project manages database migrations for Orders Manager.
 
