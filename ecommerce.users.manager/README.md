@@ -55,6 +55,10 @@ go mod tidy
 ```bash
 go get -v github.com/Wembie/ecommerce.users.manager.lib.protos/v1/libgo
 ```
+o
+```bash
+go get github.com/Wembie/ecommerce.users.manager.lib.protos/v1/libgo@latest
+```
 
 ## Configuration
 

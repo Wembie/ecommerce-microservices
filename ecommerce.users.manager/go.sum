@@ -1,5 +1,5 @@
-github.com/Wembie/ecommerce.users.manager.lib.protos/v1/libgo v0.0.0-20250831125245-1b4311d87058 h1:+lmcbKpbAM3UReGTPKi+cWTMN3IHX8FebAF8NPt5G7Y=
-github.com/Wembie/ecommerce.users.manager.lib.protos/v1/libgo v0.0.0-20250831125245-1b4311d87058/go.mod h1:0EGxSCj69Sk5cWRcq8WPNzkSk+eNAAVcsHtlOwNjKL0=
+github.com/Wembie/ecommerce.users.manager.lib.protos/v1/libgo v0.0.0-20250902231524-0ce49f924890 h1:6jNR8PyRfSSu3RGCSV3TJteMjkqngBtXAFwq8gdMav4=
+github.com/Wembie/ecommerce.users.manager.lib.protos/v1/libgo v0.0.0-20250902231524-0ce49f924890/go.mod h1:0EGxSCj69Sk5cWRcq8WPNzkSk+eNAAVcsHtlOwNjKL0=
 github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2 h1:DklsrG3dyBCFEj5IhUbnKptjxatkF07cF2ak3yi77so=
 github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2/go.mod h1:WaHUgvxTVq04UNunO+XhnAqY/wQc+bxr74GqbsZ/Jqw=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=

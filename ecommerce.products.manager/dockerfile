@@ -1,0 +1,31 @@
+FROM golang:1.23.2-alpine AS builder
+
+ENV GO111MODULE=on \
+    CGO_ENABLED=0 \
+    GOOS=linux \
+    GOARCH=amd64
+
+RUN apk update && \
+    apk add --no-cache git bash tzdata ca-certificates && \
+    update-ca-certificates
+
+WORKDIR /build
+
+COPY go.mod go.sum ./
+RUN go mod download
+
+COPY . .
+
+RUN go build -buildvcs=false -o /dist/main ./cmd
+
+FROM alpine:3.18
+
+RUN apk add --no-cache tzdata ca-certificates bash
+
+COPY --from=builder /dist/main /main
+COPY --from=builder /usr/share/zoneinfo /usr/share/zoneinfo
+COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
+
+EXPOSE 8080
+
+ENTRYPOINT ["/main"]
