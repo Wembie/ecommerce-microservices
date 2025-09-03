@@ -21,7 +21,7 @@ func TestGetConfig(t *testing.T) {
 			"MAX_IDLE_CONN": "20",
 			"MAX_OPEN_CONN": "15",
 			"APP_NAME":      "test-app",
-			"APP_PORT":      "50051",
+			"APP_PORT":      "8080",
 		}
 
 		setEnvVars(t, envVars)
@@ -38,7 +38,7 @@ func TestGetConfig(t *testing.T) {
 		assert.Equal(t, 20, conf.MaxConnection)
 		assert.Equal(t, 15, conf.MaxOpenConnection)
 		assert.Equal(t, "test-app", conf.ApplicationName)
-		assert.Equal(t, "50051", conf.AppPort)
+		assert.Equal(t, "8080", conf.AppPort)
 	})
 
 	t.Run("GetConfig with default values", func(t *testing.T) {
@@ -49,7 +49,7 @@ func TestGetConfig(t *testing.T) {
 			"DB_PASSWORD": "testpass",
 			"DB_NAME":     "testdb",
 			"APP_NAME":    "test-app",
-			"APP_PORT":    "50051",
+			"APP_PORT":    "8080",
 		}
 
 		setEnvVars(t, envVars)
@@ -60,7 +60,7 @@ func TestGetConfig(t *testing.T) {
 		assert.Equal(t, 10, conf.MaxConnection)
 		assert.Equal(t, 10, conf.MaxOpenConnection)
 		assert.False(t, conf.DBInsecure)
-		assert.Equal(t, "50051", conf.AppPort)
+		assert.Equal(t, "8080", conf.AppPort)
 	})
 
 	t.Run("GetConfig should panic on missing required DB_HOST", func(t *testing.T) {
@@ -70,7 +70,7 @@ func TestGetConfig(t *testing.T) {
 			"DB_PASSWORD": "testpass",
 			"DB_NAME":     "testdb",
 			"APP_NAME":    "test-app",
-			"APP_PORT":    "50051",
+			"APP_PORT":    "8080",
 		}
 
 		setEnvVars(t, envVars)
@@ -89,7 +89,7 @@ func TestGetConfig(t *testing.T) {
 			"DB_PASSWORD":   "testpass",
 			"DB_NAME":       "testdb",
 			"APP_NAME":      "test-app",
-			"APP_PORT":      "50051",
+			"APP_PORT":      "8080",
 			"MAX_IDLE_CONN": "invalid",
 		}
 
@@ -109,7 +109,7 @@ func TestGetConfig(t *testing.T) {
 			"DB_PASSWORD":   "testpass",
 			"DB_NAME":       "testdb",
 			"APP_NAME":      "test-app",
-			"APP_PORT":      "50051",
+			"APP_PORT":      "8080",
 			"MAX_OPEN_CONN": "invalid",
 		}
 

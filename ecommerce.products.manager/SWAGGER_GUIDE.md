@@ -1,85 +1,85 @@
-# 📚 Guía de Documentación Swagger - Products Manager API
+# 📚 Swagger Documentation Guide - Products Manager API
 
-> **Creado por:** Wembie  
-> **Fecha:** Septiembre 2025  
+> **Created by:** Wembie  
+> **Date:** September 2025  
 > **API Version:** 1.0.0
 
-## 🎯 Resumen de los Cambios Realizados
+## 🎯 Summary of Changes Made
 
-### ✅ **Mejoras Implementadas:**
+### ✅ **Implemented Improvements:**
 
-1. **🔄 Eliminación de ListProducts**: Se removió el endpoint redundante `GET /products`
-2. **🎯 SearchProducts REST-compliant**: **CAMBIADO A GET** - Ahora usa `GET /products/search` con query parameters (siguiendo estándares REST)
-3. **📝 Query Parameters mejorados**: Filtros usando query params para mejor cacheabilidad y usabilidad
-4. **🔧 Paginación actualizada**: Cambio a paginación base-0 con defaults `page=0, size=50`
-5. **✅ Validaciones comprehensivas**: Agregadas validaciones robustas en todos los endpoints
-6. **📖 Documentación Swagger completa**: Configuración profesional con información de autor
+1. **🔄 ListProducts Elimination**: Removed the redundant `GET /products` endpoint
+2. **🎯 REST-compliant SearchProducts**: **CHANGED TO GET** - Now uses `GET /products/search` with query parameters (following REST standards)
+3. **📝 Enhanced Query Parameters**: Filters using query params for better cacheability and usability
+4. **🔧 Updated Pagination**: Changed to 0-based pagination with defaults `page=0, size=50`
+5. **✅ Comprehensive Validations**: Added robust validations across all endpoints
+6. **📖 Complete Swagger Documentation**: Professional configuration with author information
 
-### 🔄 **¿Por qué GET en lugar de POST para búsquedas?**
+### 🔄 **Why GET instead of POST for searches?**
 
-**Principios REST:**
-- ✅ **GET** es idempotente (múltiples llamadas = mismo resultado)
-- ✅ **GET** es cacheable por navegadores/proxies
-- ✅ **GET** permite bookmarking de búsquedas
-- ✅ **GET** es el método semánticamente correcto para operaciones de lectura
+**REST Principles:**
+- ✅ **GET** is idempotent (multiple calls = same result)
+- ✅ **GET** is cacheable by browsers/proxies
+- ✅ **GET** allows bookmarking of searches
+- ✅ **GET** is semantically correct for read operations
 
 ---
 
-## 🚀 Cómo Generar la Documentación Swagger
+## 🚀 How to Generate Swagger Documentation
 
-### **Opción 1: Scripts Automatizados (Recomendado)**
+### **Option 1: Automated Scripts (Recommended)**
 
 #### Windows:
 ```batch
-# Ejecutar desde la raíz del proyecto
+# Run from project root
 scripts\generate-docs.bat
 ```
 
 #### Linux/macOS:
 ```bash
-# Ejecutar desde la raíz del proyecto
+# Run from project root
 ./scripts/generate-docs.sh
 ```
 
-### **Opción 2: Comando Manual**
+### **Option 2: Manual Command**
 
 ```bash
-# 1. Instalar swag CLI (solo primera vez)
+# 1. Install swag CLI (first time only)
 go install github.com/swaggo/swag/cmd/swag@latest
 
-# 2. Limpiar docs anteriores (opcional)
+# 2. Clean previous docs (optional)
 rm -rf docs/
 
-# 3. Generar documentación
+# 3. Generate documentation
 swag init -g cmd/main.go -o docs --parseDependency --parseInternal
 ```
 
-### **Parámetros Explicados:**
+### **Parameters Explained:**
 
-- `-g cmd/main.go`: Archivo principal de la aplicación
-- `-o docs`: Directorio de salida para los archivos generados
-- `--parseDependency`: Analiza dependencias externas
-- `--parseInternal`: Analiza paquetes internos del proyecto
+- `-g cmd/main.go`: Main application file
+- `-o docs`: Output directory for generated files
+- `--parseDependency`: Parses external dependencies
+- `--parseInternal`: Parses internal project packages
 
 ---
 
-## 📋 Estructura de la API
+## 📋 API Structure
 
-### **🔍 Endpoint Principal: SearchProducts**
+### **🔍 Main Endpoint: SearchProducts**
 
 **URL:** `GET /products/search`
 
 **Query Parameters:**
 ```
-?name=iPhone              // Opcional: filtrar por nombre (búsqueda parcial)
-&description=smartphone   // Opcional: filtrar por descripción (búsqueda parcial)  
-&price=999.99            // Opcional: filtrar por precio exacta
-&stock=10                // Opcional: filtrar por stock mínimo
-&page=0                  // Página (base-0, default: 0)
-&size=50                 // Elementos por página (default: 50)
+?name=iPhone              // Optional: filter by name (partial search)
+&description=smartphone   // Optional: filter by description (partial search)  
+&price=999.99            // Optional: filter by exact price
+&stock=10                // Optional: filter by minimum stock
+&page=0                  // Page (0-based, default: 0)
+&size=50                 // Items per page (default: 50)
 ```
 
-**Ejemplo completo:**
+**Complete Example:**
 ```
 GET /products/search?name=iPhone&price=999.99&page=0&size=20
 ```
@@ -107,96 +107,96 @@ GET /products/search?name=iPhone&price=999.99&page=0&size=20
 }
 ```
 
-### **✨ Otros Endpoints:**
+### **✨ Other Endpoints:**
 
-- `POST /products` - Crear producto
-- `GET /products/{id}` - Obtener producto por ID
-- `PUT /products/{id}` - Actualizar producto
-- `DELETE /products/{id}` - Eliminar producto
-- `PUT /products/{id}/stock` - Actualizar stock
+- `POST /products` - Create product
+- `GET /products/{id}` - Get product by ID
+- `PUT /products/{id}` - Update product
+- `DELETE /products/{id}` - Delete product
+- `PUT /products/{id}/stock` - Update stock
 
 ---
 
-## 🔧 Configuración y Uso
+## 🔧 Configuration and Usage
 
-### **1. Iniciar la Aplicación**
+### **1. Start the Application**
 
 ```bash
-# Desarrollo
+# Development
 go run cmd/main.go
 
-# Producción
+# Production
 go build -o app cmd/main.go
 ./app
 ```
 
-### **2. Acceder a la Documentación**
+### **2. Access Documentation**
 
-Una vez que la aplicación esté ejecutándose:
+Once the application is running:
 
 - **Swagger UI**: http://localhost:8080/swagger/index.html
 - **JSON Spec**: http://localhost:8080/swagger/doc.json
 - **Health Check**: http://localhost:8080/health
 
-### **3. Variables de Entorno**
+### **3. Environment Variables**
 
 ```bash
-# Opcional: Configurar host y versión
+# Optional: Configure host and version
 export SWAGGER_HOST="localhost:8080"
 export APP_VERSION="1.0.0"
-export SWAGGER_BASE_PATH=""  # Vacío por defecto
+export SWAGGER_BASE_PATH=""  # Empty by default
 ```
 
 ---
 
-## 📖 Archivos Generados
+## 📖 Generated Files
 
-Después de ejecutar `swag init`, se generan estos archivos:
+After running `swag init`, these files are generated:
 
 ```
 docs/
-├── docs.go        # Código Go con la especificación embebida
-├── swagger.json   # Especificación OpenAPI 3.0 en JSON
-├── swagger.yaml   # Especificación OpenAPI 3.0 en YAML
-└── types.go       # Tipos de datos para Swagger
+├── docs.go        # Go code with embedded specification
+├── swagger.json   # OpenAPI 3.0 specification in JSON
+├── swagger.yaml   # OpenAPI 3.0 specification in YAML
+└── types.go       # Data types for Swagger
 ```
 
 ---
 
-## 🎨 Personalización
+## 🎨 Customization
 
-### **Modificar Información de la API**
+### **Modify API Information**
 
-Edita los comentarios en `internal/docs/swagger.go`:
+Edit the comments in `internal/docs/swagger.go`:
 
 ```go
 // @title Products Manager API - Wembie
 // @version 1.0.0
-// @description Tu descripción personalizada aquí
-// @contact.name Tu Nombre
-// @contact.email tu.email@example.com
+// @description Your custom description here
+// @contact.name Your Name
+// @contact.email your.email@example.com
 ```
 
-### **Agregar Nuevos Endpoints**
+### **Add New Endpoints**
 
-1. Agrega comentarios Swagger en tu handler:
+1. Add Swagger comments in your handler:
 ```go
-// NuevoEndpoint godoc
-// @Summary Descripción corta
-// @Description Descripción larga del endpoint
+// NewEndpoint godoc
+// @Summary Short description
+// @Description Long description of the endpoint
 // @Tags Products
 // @Accept json
 // @Produce json
-// @Param request body ModelRequest true "Descripción del parámetro"
+// @Param request body ModelRequest true "Parameter description"
 // @Success 200 {object} ModelResponse
 // @Failure 400 {object} docs.ErrorResponse
-// @Router /nuevo-endpoint [post]
-func (h *Handler) NuevoEndpoint(c *gin.Context) {
-    // Implementación
+// @Router /new-endpoint [post]
+func (h *Handler) NewEndpoint(c *gin.Context) {
+    // Implementation
 }
 ```
 
-2. Regenera la documentación:
+2. Regenerate documentation:
 ```bash
 swag init -g cmd/main.go -o docs --parseDependency --parseInternal
 ```
@@ -206,16 +206,16 @@ swag init -g cmd/main.go -o docs --parseDependency --parseInternal
 ## ❓ Troubleshooting
 
 ### **Error: "cannot find type definition"**
-- **Solución**: Verifica que todos los tipos estén importados correctamente en `docs/types.go`
+- **Solution**: Verify that all types are correctly imported in `docs/types.go`
 
 ### **Error: "failed to get package name"**
-- **Solución**: Asegúrate de estar ejecutando el comando desde la raíz del proyecto
+- **Solution**: Make sure you're running the command from the project root
 
-### **Swagger UI no carga**
-- **Solución**: Verifica que la aplicación esté corriendo y que la ruta `/swagger/*any` esté configurada
+### **Swagger UI doesn't load**
+- **Solution**: Verify that the application is running and the `/swagger/*any` route is configured
 
-### **Campos faltantes en la documentación**
-- **Solución**: Agrega tags JSON y comentarios Swagger a tus structs:
+### **Missing fields in documentation**
+- **Solution**: Add JSON tags and Swagger comments to your structs:
 ```go
 type Product struct {
     ID   string `json:"id" example:"uuid"`
@@ -225,11 +225,11 @@ type Product struct {
 
 ---
 
-## 🏗 Best Practices Senior
+## 🏗 Senior Best Practices
 
-### **1. Validaciones Robustas**
+### **1. Robust Validations**
 ```go
-// Validar inputs
+// Validate inputs
 if request.Name == "" {
     return errors.NewErrorAPI(http.StatusBadRequest, errors.ErrInvalidInput, "Name is required")
 }
@@ -239,22 +239,22 @@ if len(request.Name) > 255 {
 }
 ```
 
-### **2. Logging Estructurado**
+### **2. Structured Logging**
 ```go
 logger.Info("Creating Product", zap.Any("request", request))
 logger.Warn("Invalid input", zap.String("field", "name"), zap.String("value", request.Name))
 ```
 
-### **3. Responses Consistentes**
+### **3. Consistent Responses**
 ```go
-// Usar el modelo PaginatedResponse para consistencia
+// Use PaginatedResponse model for consistency
 response := models.NewPaginatedResponse(items, page, size, total)
 c.JSON(http.StatusOK, response)
 ```
 
 ### **4. Error Handling**
 ```go
-// Errors estructurados con códigos HTTP apropiados
+// Structured errors with appropriate HTTP codes
 if err != nil {
     logger.Error("Database error", zap.Error(err))
     c.JSON(http.StatusInternalServerError, gin.H{"error": "Internal server error"})
@@ -264,19 +264,19 @@ if err != nil {
 
 ---
 
-## 🎯 Ejemplo de Uso con cURL
+## 🎯 Usage Example with cURL
 
 ```bash
-# Buscar productos (nuevo GET endpoint - REST correcto)
+# Search products (new GET endpoint - REST correct)
 curl -X GET "http://localhost:8080/products/search?name=iPhone&page=0&size=10"
 
-# Buscar con múltiples filtros
+# Search with multiple filters
 curl -X GET "http://localhost:8080/products/search?name=iPhone&price=999.99&stock=5&page=0&size=20"
 
-# Buscar solo con paginación (listar todos)
+# Search with pagination only (list all)
 curl -X GET "http://localhost:8080/products/search?page=0&size=50"
 
-# Crear producto
+# Create product
 curl -X POST http://localhost:8080/products \
   -H "Content-Type: application/json" \
   -d '{
@@ -289,6 +289,6 @@ curl -X POST http://localhost:8080/products \
 
 ---
 
-**¡Documentación completa y profesional lista para usar! 🚀**
+**Complete and professional documentation ready to use! 🚀**
 
-> Para cualquier duda o mejora, contacta a **Wembie** - El arquitecto de esta API 😎
+> For any questions or improvements, contact **Wembie** - The architect of this API 😎
