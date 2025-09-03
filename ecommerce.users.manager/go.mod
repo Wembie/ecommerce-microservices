@@ -3,7 +3,7 @@ module ecommerce.users.manager
 go 1.23.2
 
 require (
-	github.com/Wembie/ecommerce.users.manager.lib.protos/v1/libgo v0.0.0-20250831125245-1b4311d87058
+	github.com/Wembie/ecommerce.users.manager.lib.protos/v1/libgo v0.0.0-20250902231524-0ce49f924890
 	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2
 	github.com/golang-jwt/jwt/v5 v5.3.0
 	github.com/google/uuid v1.6.0
