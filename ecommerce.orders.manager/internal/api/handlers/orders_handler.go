@@ -153,6 +153,8 @@ func (h *OrdersHandler) GetOrdersByUser(c *gin.Context) {
 		return
 	}
 
+	//TODO improve pagination as in the products
+
 	page, _ := strconv.Atoi(c.DefaultQuery("page", "1"))
 	size, _ := strconv.Atoi(c.DefaultQuery("size", "10"))
 

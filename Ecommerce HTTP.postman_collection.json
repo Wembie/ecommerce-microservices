@@ -1,0 +1,2720 @@
+{
+	"info": {
+		"_postman_id": "144c38d0-756d-43d9-9989-d09118bf877a",
+		"name": "Ecommerce HTTP",
+		"description": "[https://github.com/Wembie/ecommerce-microservices](https://github.com/Wembie/ecommerce-microservices)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37797695"
+	},
+	"item": [
+		{
+			"name": "products manager",
+			"item": [
+				{
+					"name": "/products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"description\": \"TridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTrident\",\r\n  \"name\": \"Chicle\",\r\n  \"price\": 400,\r\n  \"stock\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/{{productsEndpoint}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"{{productsEndpoint}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"description\": \"string\",\r\n  \"name\": \"string\",\r\n  \"price\": 0,\r\n  \"stock\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{productsHost}}/{{productsEndpoint}}",
+									"host": [
+										"{{productsHost}}"
+									],
+									"path": [
+										"{{productsEndpoint}}"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "38c53469115c542019e361e62d1fb9aa"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Sep 2025 13:54:49 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "48"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Product price must be greater than 0\"\n}"
+						},
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"description\": \"string\",\r\n  \"name\": \"\",\r\n  \"price\": 0,\r\n  \"stock\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{productsHost}}/{{productsEndpoint}}",
+									"host": [
+										"{{productsHost}}"
+									],
+									"path": [
+										"{{productsEndpoint}}"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "127bcdd9daaca702458d932a226d3f1b"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Sep 2025 13:55:17 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Product name cannot be empty\"\n}"
+						},
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"description\": \"Trident\",\r\n  \"name\": \"Chicle\",\r\n  \"price\": 100,\r\n  \"stock\": -1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{productsHost}}/{{productsEndpoint}}",
+									"host": [
+										"{{productsHost}}"
+									],
+									"path": [
+										"{{productsEndpoint}}"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "b178667647357a6a658dac566c18e903"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Sep 2025 13:56:26 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Product stock cannot be negative\"\n}"
+						},
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"description\": \"TridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTridentTrident\",\r\n  \"name\": \"Chicle\",\r\n  \"price\": 400,\r\n  \"stock\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{productsHost}}/{{productsEndpoint}}",
+									"host": [
+										"{{productsHost}}"
+									],
+									"path": [
+										"{{productsEndpoint}}"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "244de2c3e758437c28b9ef466fa47024"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Sep 2025 13:57:45 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Product description cannot exceed 1000 characters\"\n}"
+						},
+						{
+							"name": "201 Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"description\": \"Trident\",\r\n  \"name\": \"Chicle\",\r\n  \"price\": 400,\r\n  \"stock\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{productsHost}}/{{productsEndpoint}}",
+									"host": [
+										"{{productsHost}}"
+									],
+									"path": [
+										"{{productsEndpoint}}"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "65c708db788ff47ac9844416a3df0879"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Sep 2025 13:56:52 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "150"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"9db7afdd-6336-4755-8361-7917e74338f1\",\n    \"name\": \"Chicle\",\n    \"description\": \"Trident\",\n    \"price\": 400,\n    \"stock\": 5,\n    \"created_at\": \"2025-09-03T13:56:52.747506Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/products/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{productsHost}}/{{productsEndpoint}}/82086e2d-6cd1-4b70-b383-d6fcd48e9b11",
+							"host": [
+								"{{productsHost}}"
+							],
+							"path": [
+								"{{productsEndpoint}}",
+								"82086e2d-6cd1-4b70-b383-d6fcd48e9b11"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "404 Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{productsHost}}/{{productsEndpoint}}/11bfc19a-77f6-4bd4-9f97-f04b210a0581",
+									"host": [
+										"{{productsHost}}"
+									],
+									"path": [
+										"{{productsEndpoint}}",
+										"11bfc19a-77f6-4bd4-9f97-f04b210a0581"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "88455c9f2062f39ba0663310403df21f"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Sep 2025 14:08:29 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Resource not found\"\n}"
+						},
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{productsHost}}/{{productsEndpoint}}/11bfc19a-77f6-4bd4-9f97-f04b210a058",
+									"host": [
+										"{{productsHost}}"
+									],
+									"path": [
+										"{{productsEndpoint}}",
+										"11bfc19a-77f6-4bd4-9f97-f04b210a058"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "6d52fef0d076dcefb018c4dce6d5d32c"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Sep 2025 14:08:41 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Invalid product ID\"\n}"
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{productsHost}}/{{productsEndpoint}}/f5a9ff21-e7f6-4114-9a36-674752e73521",
+									"host": [
+										"{{productsHost}}"
+									],
+									"path": [
+										"{{productsEndpoint}}",
+										"f5a9ff21-e7f6-4114-9a36-674752e73521"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "b6010c5177d2fa429957ac15b6a496e1"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Sep 2025 14:11:22 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "150"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"f5a9ff21-e7f6-4114-9a36-674752e73521\",\n    \"name\": \"Chicle\",\n    \"description\": \"Trident\",\n    \"price\": 100,\n    \"stock\": 5,\n    \"created_at\": \"2025-09-03T13:56:06.722287Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/products/search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{productsHost}}/{{productsEndpoint}}/search?name=&description=&price=&stock=&page=0&size=50",
+							"host": [
+								"{{productsHost}}"
+							],
+							"path": [
+								"{{productsEndpoint}}",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "description",
+									"value": ""
+								},
+								{
+									"key": "price",
+									"value": ""
+								},
+								{
+									"key": "stock",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{productsHost}}/{{productsEndpoint}}/search?name=&description&price&stock&page=0&size=50",
+									"host": [
+										"{{productsHost}}"
+									],
+									"path": [
+										"{{productsEndpoint}}",
+										"search"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": ""
+										},
+										{
+											"key": "description",
+											"value": null
+										},
+										{
+											"key": "price",
+											"value": null
+										},
+										{
+											"key": "stock",
+											"value": null
+										},
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "50"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "40a2426870f86a1872082b1e26c8cd94"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Sep 2025 14:25:48 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "914"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"items\": [\n        {\n            \"id\": \"9db7afdd-6336-4755-8361-7917e74338f1\",\n            \"name\": \"Awita\",\n            \"description\": \"Agua Potable\",\n            \"price\": 2500,\n            \"stock\": 10,\n            \"created_at\": \"2025-09-03T13:56:52.747506Z\",\n            \"updated_at\": \"2025-09-03T14:13:11.79549Z\"\n        },\n        {\n            \"id\": \"f5a9ff21-e7f6-4114-9a36-674752e73521\",\n            \"name\": \"Chicle\",\n            \"description\": \"Trident\",\n            \"price\": 100,\n            \"stock\": 5,\n            \"created_at\": \"2025-09-03T13:56:06.722287Z\"\n        },\n        {\n            \"id\": \"5b4eadc5-6649-4930-8078-5ecad99564da\",\n            \"name\": \"Johan\",\n            \"description\": \"string\",\n            \"price\": 100.5,\n            \"stock\": 10,\n            \"created_at\": \"2025-09-03T13:47:14.042319Z\",\n            \"updated_at\": \"2025-09-03T13:52:21.932058Z\"\n        },\n        {\n            \"id\": \"64585eb3-3df4-44d2-bac8-03e4f23d8c47\",\n            \"name\": \"Grafica\",\n            \"description\": \"Componentes PC\",\n            \"price\": 100000,\n            \"stock\": 5,\n            \"created_at\": \"2025-09-02T20:57:33.7051Z\"\n        },\n        {\n            \"id\": \"3556010c-2e1d-4340-be3e-4c53c82ca43a\",\n            \"name\": \"Brendix\",\n            \"description\": \"conlGotita\",\n            \"price\": 1000000,\n            \"stock\": 5,\n            \"created_at\": \"2025-09-02T20:45:57.753886Z\"\n        }\n    ],\n    \"page\": 0,\n    \"size\": 50,\n    \"total\": 5,\n    \"pages\": 1\n}"
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{productsHost}}/{{productsEndpoint}}/search?name=&description&price=&stock=10&page=0&size=50",
+									"host": [
+										"{{productsHost}}"
+									],
+									"path": [
+										"{{productsEndpoint}}",
+										"search"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": ""
+										},
+										{
+											"key": "description",
+											"value": null
+										},
+										{
+											"key": "price",
+											"value": ""
+										},
+										{
+											"key": "stock",
+											"value": "10"
+										},
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "50"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "9754bd2db229b1a52aaa1b70dc9bd501"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Sep 2025 14:26:13 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "444"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"items\": [\n        {\n            \"id\": \"9db7afdd-6336-4755-8361-7917e74338f1\",\n            \"name\": \"Awita\",\n            \"description\": \"Agua Potable\",\n            \"price\": 2500,\n            \"stock\": 10,\n            \"created_at\": \"2025-09-03T13:56:52.747506Z\",\n            \"updated_at\": \"2025-09-03T14:13:11.79549Z\"\n        },\n        {\n            \"id\": \"5b4eadc5-6649-4930-8078-5ecad99564da\",\n            \"name\": \"Johan\",\n            \"description\": \"string\",\n            \"price\": 100.5,\n            \"stock\": 10,\n            \"created_at\": \"2025-09-03T13:47:14.042319Z\",\n            \"updated_at\": \"2025-09-03T13:52:21.932058Z\"\n        }\n    ],\n    \"page\": 0,\n    \"size\": 50,\n    \"total\": 2,\n    \"pages\": 1\n}"
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{productsHost}}/{{productsEndpoint}}/search?name=&description&price=2500&stock=&page=0&size=50",
+									"host": [
+										"{{productsHost}}"
+									],
+									"path": [
+										"{{productsEndpoint}}",
+										"search"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": ""
+										},
+										{
+											"key": "description",
+											"value": null
+										},
+										{
+											"key": "price",
+											"value": "2500"
+										},
+										{
+											"key": "stock",
+											"value": ""
+										},
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "50"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "7b590138653f0e4e6cbb8beb71543882"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Sep 2025 14:27:36 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "249"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"items\": [\n        {\n            \"id\": \"9db7afdd-6336-4755-8361-7917e74338f1\",\n            \"name\": \"Awita\",\n            \"description\": \"Agua Potable\",\n            \"price\": 2500,\n            \"stock\": 10,\n            \"created_at\": \"2025-09-03T13:56:52.747506Z\",\n            \"updated_at\": \"2025-09-03T14:13:11.79549Z\"\n        }\n    ],\n    \"page\": 0,\n    \"size\": 50,\n    \"total\": 1,\n    \"pages\": 1\n}"
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{productsHost}}/{{productsEndpoint}}/search?name=&description=conl&price=&stock=&page=0&size=50",
+									"host": [
+										"{{productsHost}}"
+									],
+									"path": [
+										"{{productsEndpoint}}",
+										"search"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": ""
+										},
+										{
+											"key": "description",
+											"value": "conl"
+										},
+										{
+											"key": "price",
+											"value": ""
+										},
+										{
+											"key": "stock",
+											"value": ""
+										},
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "50"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "e9510aba9bc624f045e1660f1b65f3e8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Sep 2025 14:27:59 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "209"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"items\": [\n        {\n            \"id\": \"3556010c-2e1d-4340-be3e-4c53c82ca43a\",\n            \"name\": \"Brendix\",\n            \"description\": \"conlGotita\",\n            \"price\": 1000000,\n            \"stock\": 5,\n            \"created_at\": \"2025-09-02T20:45:57.753886Z\"\n        }\n    ],\n    \"page\": 0,\n    \"size\": 50,\n    \"total\": 1,\n    \"pages\": 1\n}"
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{productsHost}}/{{productsEndpoint}}/search?name=Graf&description=&price=&stock=&page=0&size=50",
+									"host": [
+										"{{productsHost}}"
+									],
+									"path": [
+										"{{productsEndpoint}}",
+										"search"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Graf"
+										},
+										{
+											"key": "description",
+											"value": ""
+										},
+										{
+											"key": "price",
+											"value": ""
+										},
+										{
+											"key": "stock",
+											"value": ""
+										},
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "50"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "47bb6738e5936d9cf9bbd64409c617c9"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Sep 2025 14:28:17 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "210"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"items\": [\n        {\n            \"id\": \"64585eb3-3df4-44d2-bac8-03e4f23d8c47\",\n            \"name\": \"Grafica\",\n            \"description\": \"Componentes PC\",\n            \"price\": 100000,\n            \"stock\": 5,\n            \"created_at\": \"2025-09-02T20:57:33.7051Z\"\n        }\n    ],\n    \"page\": 0,\n    \"size\": 50,\n    \"total\": 1,\n    \"pages\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "/product/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"description\": \"Agua Potable\",\r\n  \"name\": \"Awita\",\r\n  \"price\": 2500,\r\n  \"stock\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/products/9db7afdd-6336-4755-8361-7917e74338f1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"products",
+								"9db7afdd-6336-4755-8361-7917e74338f1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"description\": \"Agua Potable\",\r\n  \"name\": \"Awita\",\r\n  \"price\": 0,\r\n  \"stock\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{productsHost}}/{{productsEndpoint}}/9db7afdd-6336-4755-8361-7917e74338f1",
+									"host": [
+										"{{productsHost}}"
+									],
+									"path": [
+										"{{productsEndpoint}}",
+										"9db7afdd-6336-4755-8361-7917e74338f1"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "820802b46b35c33e730d89a4b837717a"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Sep 2025 14:13:43 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "48"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Product price must be greater than 0\"\n}"
+						},
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"description\": \"Agua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua Potable\",\r\n  \"name\": \"Water\",\r\n  \"price\": 3000,\r\n  \"stock\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{productsHost}}/{{productsEndpoint}}/9db7afdd-6336-4755-8361-7917e74338f1",
+									"host": [
+										"{{productsHost}}"
+									],
+									"path": [
+										"{{productsEndpoint}}",
+										"9db7afdd-6336-4755-8361-7917e74338f1"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "947a28ef72029fa703a0e491ef4029f1"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Sep 2025 14:14:29 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Product description cannot exceed 1000 characters\"\n}"
+						},
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"description\": \"Agua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua PotableAgua Potable\",\r\n  \"name\": \"\",\r\n  \"price\": 3000,\r\n  \"stock\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{productsHost}}/{{productsEndpoint}}/9db7afdd-6336-4755-8361-7917e74338f1",
+									"host": [
+										"{{productsHost}}"
+									],
+									"path": [
+										"{{productsEndpoint}}",
+										"9db7afdd-6336-4755-8361-7917e74338f1"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "04ba3fedcfddf738510e1eb01adbdf06"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Sep 2025 14:14:50 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Product name cannot be empty\"\n}"
+						},
+						{
+							"name": "404 Not Found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"description\": \"Agua Potable\",\r\n  \"name\": \"Awita\",\r\n  \"price\": 3000,\r\n  \"stock\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{productsHost}}/{{productsEndpoint}}/9db7afdd-6336-4755-8361-7917e74338f8",
+									"host": [
+										"{{productsHost}}"
+									],
+									"path": [
+										"{{productsEndpoint}}",
+										"9db7afdd-6336-4755-8361-7917e74338f8"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "a1396e520af5329e5974869f6e6e0d31"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Sep 2025 14:32:18 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Resource not found\"\n}"
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"description\": \"Agua Potable\",\r\n  \"name\": \"Awita\",\r\n  \"price\": 2500,\r\n  \"stock\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{productsHost}}/{{productsEndpoint}}/9db7afdd-6336-4755-8361-7917e74338f1",
+									"host": [
+										"{{productsHost}}"
+									],
+									"path": [
+										"{{productsEndpoint}}",
+										"9db7afdd-6336-4755-8361-7917e74338f1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "4b841f80d8e0cc8177f9ae06c81b7c89"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Sep 2025 14:13:11 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "198"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"9db7afdd-6336-4755-8361-7917e74338f1\",\n    \"name\": \"Awita\",\n    \"description\": \"Agua Potable\",\n    \"price\": 2500,\n    \"stock\": 10,\n    \"created_at\": \"2025-09-03T13:56:52.747506Z\",\n    \"updated_at\": \"2025-09-03T14:13:11.79549Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/product/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/{{productsEndpoint}}/9db7afdd-6336-4755-8361-7917e74338f",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"{{productsEndpoint}}",
+								"9db7afdd-6336-4755-8361-7917e74338f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{productsHost}}/{{productsEndpoint}}/9db7afdd-6336-4755-8361-7917e74338f",
+									"host": [
+										"{{productsHost}}"
+									],
+									"path": [
+										"{{productsEndpoint}}",
+										"9db7afdd-6336-4755-8361-7917e74338f"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "c759407b180077f501430fb24c575a04"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Sep 2025 14:30:29 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Invalid product ID\"\n}"
+						},
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{productsHost}}/{{productsEndpoint}}/9db7afdd-6336-4755-8361-7917e74338f1",
+									"host": [
+										"{{productsHost}}"
+									],
+									"path": [
+										"{{productsEndpoint}}",
+										"9db7afdd-6336-4755-8361-7917e74338f1"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "45accd21aa7300d5b1cfbf8d8a3d3d9d"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Sep 2025 14:31:21 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"error\": \"Resource not found\"\n}"
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{productsHost}}/{{productsEndpoint}}/9db7afdd-6336-4755-8361-7917e74338f1",
+									"host": [
+										"{{productsHost}}"
+									],
+									"path": [
+										"{{productsEndpoint}}",
+										"9db7afdd-6336-4755-8361-7917e74338f1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "1c9410d81d3603dd7383fca7814d1f72"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Sep 2025 14:30:38 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "16"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "/product/{id}/stock",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"stock\": 50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{productsHost}}/{{productsEndpoint}}/f5a9ff21-e7f6-4114-9a36-674752e73521/stock",
+							"host": [
+								"{{productsHost}}"
+							],
+							"path": [
+								"{{productsEndpoint}}",
+								"f5a9ff21-e7f6-4114-9a36-674752e73521",
+								"stock"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "404 Not Found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"stock\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{productsHost}}/{{productsEndpoint}}/9db7afdd-6336-4755-8361-7917e74338f8/stock",
+									"host": [
+										"{{productsHost}}"
+									],
+									"path": [
+										"{{productsEndpoint}}",
+										"9db7afdd-6336-4755-8361-7917e74338f8",
+										"stock"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "eb57502135ac7b81b6683bf8aa507408"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Sep 2025 14:34:09 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Resource not found\"\n}"
+						},
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"stock\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{productsHost}}/{{productsEndpoint}}/f5a9ff21-e7f6-4114-9a36-674752e73521/stock",
+									"host": [
+										"{{productsHost}}"
+									],
+									"path": [
+										"{{productsEndpoint}}",
+										"f5a9ff21-e7f6-4114-9a36-674752e73521",
+										"stock"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "e21a439af6e865046da71f29fcae476d"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Sep 2025 14:34:41 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"error\": \"Invalid product ID\"\n}"
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"stock\": 100\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{productsHost}}/{{productsEndpoint}}/f5a9ff21-e7f6-4114-9a36-674752e73521/stock",
+									"host": [
+										"{{productsHost}}"
+									],
+									"path": [
+										"{{productsEndpoint}}",
+										"f5a9ff21-e7f6-4114-9a36-674752e73521",
+										"stock"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "8ad9baeb03d7f5370cf1b171e475a091"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Sep 2025 14:35:58 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "195"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"f5a9ff21-e7f6-4114-9a36-674752e73521\",\n    \"name\": \"Chicle\",\n    \"description\": \"Trident\",\n    \"price\": 100,\n    \"stock\": 100,\n    \"created_at\": \"2025-09-03T13:56:06.722287Z\",\n    \"updated_at\": \"2025-09-03T14:35:58.026219Z\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "orders manager",
+			"item": [
+				{
+					"name": "/orders",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://{{ordersHost}}/auth/token",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "http://{{ordersHost}}/auth/token",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "tokenName",
+									"value": "Token",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"items\": [\r\n    {\r\n      \"product_id\": \"string\",\r\n      \"quantity\": 0\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ordersHost}}/{{ordersEndpoint}}",
+							"host": [
+								"{{ordersHost}}"
+							],
+							"path": [
+								"{{ordersEndpoint}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201 Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"items\": [\r\n    {\r\n      \"product_id\": \"5eb1c793-534e-4291-bcc6-8f96fc22a97d\",\r\n      \"quantity\": 1\r\n    },\r\n    {\r\n      \"product_id\": \"eaccae2d-3fe7-48a1-a693-f22c2abd861f\",\r\n      \"quantity\": 3\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ordersHost}}/{{ordersEndpoint}}",
+									"host": [
+										"{{ordersHost}}"
+									],
+									"path": [
+										"{{ordersEndpoint}}"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "08b5af3d70cead2b0c7a54a215c2bc87"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Sep 2025 16:25:37 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "539"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"order\": {\n        \"id\": \"9fa426e4-296c-4379-9de7-5afa2dde4569\",\n        \"user_id\": \"fbb7a22d-7f9f-439d-83a3-7601fc7c473a\",\n        \"status\": \"pending\",\n        \"total\": 90000,\n        \"created_at\": \"2025-09-05T16:25:37.858906Z\"\n    },\n    \"items\": [\n        {\n            \"id\": \"4d7dc753-dd6d-4f98-95dc-11c1f92b25a6\",\n            \"order_id\": \"9fa426e4-296c-4379-9de7-5afa2dde4569\",\n            \"product_id\": \"5eb1c793-534e-4291-bcc6-8f96fc22a97d\",\n            \"quantity\": 1,\n            \"price\": 63000\n        },\n        {\n            \"id\": \"98e8031d-c8cb-4dcb-ae63-b93f44544bb3\",\n            \"order_id\": \"9fa426e4-296c-4379-9de7-5afa2dde4569\",\n            \"product_id\": \"eaccae2d-3fe7-48a1-a693-f22c2abd861f\",\n            \"quantity\": 3,\n            \"price\": 9000\n        }\n    ]\n}"
+						},
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"items\": [\r\n    {\r\n      \"product_id\": \"5eb1c793-534e-4291-bcc6-8f96fc22a97d\",\r\n      \"quantity\": 1\r\n    },\r\n    {\r\n      \"product_id\": \"eaccae2d-3fe7-48a1-a693-f22c2abd861f\",\r\n      \"quantity\": 3\r\n    },\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ordersHost}}/{{ordersEndpoint}}",
+									"host": [
+										"{{ordersHost}}"
+									],
+									"path": [
+										"{{ordersEndpoint}}"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "5c3d61df07409b8188997aed4755b3ae"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Sep 2025 16:27:35 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "64"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"invalid character ']' looking for beginning of value\"\n}"
+						},
+						{
+							"name": "404 Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"items\": [\r\n    {\r\n      \"product_id\": \"5eb1c793-534e-4291-bcc6-8f96fc22a97a\",\r\n      \"quantity\": 1\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ordersHost}}/{{ordersEndpoint}}",
+									"host": [
+										"{{ordersHost}}"
+									],
+									"path": [
+										"{{ordersEndpoint}}"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "cc7d55891d6ddb8c17db79a5b6873963"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Sep 2025 16:28:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Product not found\"\n}"
+						},
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"items\": [\r\n    {\r\n      \"product_id\": \"5eb1c793-534e-4291-bcc6-8f96fc22a97\",\r\n      \"quantity\": 1\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ordersHost}}/{{ordersEndpoint}}",
+									"host": [
+										"{{ordersHost}}"
+									],
+									"path": [
+										"{{ordersEndpoint}}"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "e37d0530b1c9ab815cd86577284c93d5"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Sep 2025 16:28:11 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"invalid UUID length: 35\"\n}"
+						},
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"items\": [\r\n    {\r\n      \"product_id\": \"string\",\r\n      \"quantity\": 1\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ordersHost}}/{{ordersEndpoint}}",
+									"host": [
+										"{{ordersHost}}"
+									],
+									"path": [
+										"{{ordersEndpoint}}"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "8c169d842ed41e9cc7d18c6af5808ef4"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Sep 2025 16:28:31 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "34"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"invalid UUID length: 6\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/orders/user",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://{{ordersHost}}/auth/token",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "http://{{ordersHost}}/auth/token",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "tokenName",
+									"value": "Token",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ordersHost}}/{{ordersEndpoint}}/user",
+							"host": [
+								"{{ordersHost}}"
+							],
+							"path": [
+								"{{ordersEndpoint}}",
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{ordersHost}}/{{ordersEndpoint}}/user",
+									"host": [
+										"{{ordersHost}}"
+									],
+									"path": [
+										"{{ordersEndpoint}}",
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "1c1979217e47135b9d972105a43be798"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Sep 2025 16:29:41 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "441"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"9fa426e4-296c-4379-9de7-5afa2dde4569\",\n            \"user_id\": \"fbb7a22d-7f9f-439d-83a3-7601fc7c473a\",\n            \"status\": \"pending\",\n            \"total\": 90000,\n            \"created_at\": \"2025-09-05T16:25:37.858906Z\"\n        },\n        {\n            \"id\": \"35f23f1c-fdbb-4ab0-ae81-0aa0ed8dcd8e\",\n            \"user_id\": \"fbb7a22d-7f9f-439d-83a3-7601fc7c473a\",\n            \"status\": \"confirmed\",\n            \"total\": 2500,\n            \"created_at\": \"2025-09-05T03:45:57.414339Z\",\n            \"updated_at\": \"2025-09-05T03:48:41.952187Z\"\n        }\n    ],\n    \"page\": 1,\n    \"size\": 10,\n    \"total\": 2,\n    \"total_pages\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "/orders/{id}",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://{{ordersHost}}/auth/token",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "http://{{ordersHost}}/auth/token",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "tokenName",
+									"value": "Token",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ordersHost}}/{{ordersEndpoint}}/9fa426e4-296c-4379-9de7-5afa2dde456",
+							"host": [
+								"{{ordersHost}}"
+							],
+							"path": [
+								"{{ordersEndpoint}}",
+								"9fa426e4-296c-4379-9de7-5afa2dde456"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "404 Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{ordersHost}}/{{ordersEndpoint}}/9fa426e4-296c-4379-9de7-5afa2dde456a",
+									"host": [
+										"{{ordersHost}}"
+									],
+									"path": [
+										"{{ordersEndpoint}}",
+										"9fa426e4-296c-4379-9de7-5afa2dde456a"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "5ac061be7ce6b0c11241d2d49ad247d2"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Sep 2025 16:32:37 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Resource not found\"\n}"
+						},
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{ordersHost}}/{{ordersEndpoint}}/9fa426e4-296c-4379-9de7-5afa2dde456",
+									"host": [
+										"{{ordersHost}}"
+									],
+									"path": [
+										"{{ordersEndpoint}}",
+										"9fa426e4-296c-4379-9de7-5afa2dde456"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "7b694796534ca75bd9b7def94ce62301"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Sep 2025 16:32:48 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Invalid order ID\"\n}"
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{ordersHost}}/{{ordersEndpoint}}/9fa426e4-296c-4379-9de7-5afa2dde4569",
+									"host": [
+										"{{ordersHost}}"
+									],
+									"path": [
+										"{{ordersEndpoint}}",
+										"9fa426e4-296c-4379-9de7-5afa2dde4569"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "9a31f39b4766ba5983ab98fbfd361896"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Sep 2025 16:32:13 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "539"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"order\": {\n        \"id\": \"9fa426e4-296c-4379-9de7-5afa2dde4569\",\n        \"user_id\": \"fbb7a22d-7f9f-439d-83a3-7601fc7c473a\",\n        \"status\": \"pending\",\n        \"total\": 90000,\n        \"created_at\": \"2025-09-05T16:25:37.858906Z\"\n    },\n    \"items\": [\n        {\n            \"id\": \"4d7dc753-dd6d-4f98-95dc-11c1f92b25a6\",\n            \"order_id\": \"9fa426e4-296c-4379-9de7-5afa2dde4569\",\n            \"product_id\": \"5eb1c793-534e-4291-bcc6-8f96fc22a97d\",\n            \"quantity\": 1,\n            \"price\": 63000\n        },\n        {\n            \"id\": \"98e8031d-c8cb-4dcb-ae63-b93f44544bb3\",\n            \"order_id\": \"9fa426e4-296c-4379-9de7-5afa2dde4569\",\n            \"product_id\": \"eaccae2d-3fe7-48a1-a693-f22c2abd861f\",\n            \"quantity\": 3,\n            \"price\": 9000\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "/orders/{id}/items",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://{{ordersHost}}/auth/token",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "http://{{ordersHost}}/auth/token",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "tokenName",
+									"value": "Token",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ordersHost}}/{{ordersEndpoint}}/9fa426e4-296c-4379-9de7-5afa2dde4569/items",
+							"host": [
+								"{{ordersHost}}"
+							],
+							"path": [
+								"{{ordersEndpoint}}",
+								"9fa426e4-296c-4379-9de7-5afa2dde4569",
+								"items"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{ordersHost}}/{{ordersEndpoint}}/9fa426e4-296c-4379-9de7-5afa2dde456/items",
+									"host": [
+										"{{ordersHost}}"
+									],
+									"path": [
+										"{{ordersEndpoint}}",
+										"9fa426e4-296c-4379-9de7-5afa2dde456",
+										"items"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "2e273e56aa6bb82d2f0c5002df96c74d"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Sep 2025 16:36:26 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Invalid order ID\"\n}"
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{ordersHost}}/{{ordersEndpoint}}/9fa426e4-296c-4379-9de7-5afa2dde456a/items",
+									"host": [
+										"{{ordersHost}}"
+									],
+									"path": [
+										"{{ordersEndpoint}}",
+										"9fa426e4-296c-4379-9de7-5afa2dde456a",
+										"items"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "29fc50c3bb44e396ae4f274b5c6161be"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Sep 2025 16:36:52 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4"
+								}
+							],
+							"cookie": [],
+							"body": "null"
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{ordersHost}}/{{ordersEndpoint}}/9fa426e4-296c-4379-9de7-5afa2dde4569/items",
+									"host": [
+										"{{ordersHost}}"
+									],
+									"path": [
+										"{{ordersEndpoint}}",
+										"9fa426e4-296c-4379-9de7-5afa2dde4569",
+										"items"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "97fc31887d7f323e1af6a5ebf1926140"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Sep 2025 16:37:22 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "350"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"4d7dc753-dd6d-4f98-95dc-11c1f92b25a6\",\n        \"order_id\": \"9fa426e4-296c-4379-9de7-5afa2dde4569\",\n        \"product_id\": \"5eb1c793-534e-4291-bcc6-8f96fc22a97d\",\n        \"quantity\": 1,\n        \"price\": 63000\n    },\n    {\n        \"id\": \"98e8031d-c8cb-4dcb-ae63-b93f44544bb3\",\n        \"order_id\": \"9fa426e4-296c-4379-9de7-5afa2dde4569\",\n        \"product_id\": \"eaccae2d-3fe7-48a1-a693-f22c2abd861f\",\n        \"quantity\": 3,\n        \"price\": 9000\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "/orders/{id}/status",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://{{ordersHost}}/auth/token",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "http://{{ordersHost}}/auth/token",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "tokenName",
+									"value": "Token",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"status\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ordersHost}}/{{ordersEndpoint}}/9fa426e4-296c-4379-9de7-5afa2dde4569/status",
+							"host": [
+								"{{ordersHost}}"
+							],
+							"path": [
+								"{{ordersEndpoint}}",
+								"9fa426e4-296c-4379-9de7-5afa2dde4569",
+								"status"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"status\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ordersHost}}/{{ordersEndpoint}}/9fa426e4-296c-4379-9de7-5afa2dde4569/status",
+									"host": [
+										"{{ordersHost}}"
+									],
+									"path": [
+										"{{ordersEndpoint}}",
+										"9fa426e4-296c-4379-9de7-5afa2dde4569",
+										"status"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "18ea130e2d5fe6cb5a92aeda8baa1d66"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Sep 2025 16:41:17 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Invalid order status\"\n}"
+						},
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"status\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ordersHost}}/{{ordersEndpoint}}/9fa426e4-296c-4379-9de7-5afa2dde4569/status",
+									"host": [
+										"{{ordersHost}}"
+									],
+									"path": [
+										"{{ordersEndpoint}}",
+										"9fa426e4-296c-4379-9de7-5afa2dde4569",
+										"status"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "b4adc0aba23740a88fad262f5a249ca6"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Sep 2025 16:42:01 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Invalid order status\"\n}"
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"status\": \"confirmed\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ordersHost}}/{{ordersEndpoint}}/9fa426e4-296c-4379-9de7-5afa2dde4569/status",
+									"host": [
+										"{{ordersHost}}"
+									],
+									"path": [
+										"{{ordersEndpoint}}",
+										"9fa426e4-296c-4379-9de7-5afa2dde4569",
+										"status"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "cf40ac97a1c281fc4824ff6bff55571f"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Sep 2025 16:45:04 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "215"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"9fa426e4-296c-4379-9de7-5afa2dde4569\",\n    \"user_id\": \"fbb7a22d-7f9f-439d-83a3-7601fc7c473a\",\n    \"status\": \"confirmed\",\n    \"total\": 90000,\n    \"created_at\": \"2025-09-05T16:25:37.858906Z\",\n    \"updated_at\": \"2025-09-05T16:45:04.266108Z\"\n}"
+						}
+					]
+				}
+			],
+			"description": "Orders status:\n\npending  \nconfirmed  \nshipped  \ndelivered\n\ncancelled",
+			"auth": {
+				"type": "oauth2",
+				"oauth2": [
+					{
+						"key": "refreshRequestParams",
+						"value": [],
+						"type": "any"
+					},
+					{
+						"key": "tokenRequestParams",
+						"value": [],
+						"type": "any"
+					},
+					{
+						"key": "authRequestParams",
+						"value": [],
+						"type": "any"
+					},
+					{
+						"key": "tokenName",
+						"value": "Token",
+						"type": "string"
+					},
+					{
+						"key": "challengeAlgorithm",
+						"value": "S256",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "{{username}}",
+						"type": "string"
+					},
+					{
+						"key": "useBrowser",
+						"value": true,
+						"type": "boolean"
+					},
+					{
+						"key": "password",
+						"value": "{{password}}",
+						"type": "string"
+					},
+					{
+						"key": "grant_type",
+						"value": "password_credentials",
+						"type": "string"
+					},
+					{
+						"key": "authUrl",
+						"value": "http://{{ordersHost}}/auth/token",
+						"type": "string"
+					},
+					{
+						"key": "addTokenTo",
+						"value": "header",
+						"type": "string"
+					},
+					{
+						"key": "client_authentication",
+						"value": "header",
+						"type": "string"
+					},
+					{
+						"key": "accessTokenUrl",
+						"value": "http://{{ordersHost}}/auth/token",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "/auth/token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{authHost}}/{{authEndpoint}}",
+							"host": [
+								"{{authHost}}"
+							],
+							"path": [
+								"{{authEndpoint}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "401 Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "321",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{authHost}}/{{authEndpoint}}",
+									"host": [
+										"{{authHost}}"
+									],
+									"path": [
+										"{{authEndpoint}}"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "19f310357c6a7ca3864bd8a4cc7a6e91"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Sep 2025 16:48:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "31"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"invalid credentials\"\n}"
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{authHost}}/{{authEndpoint}}",
+									"host": [
+										"{{authHost}}"
+									],
+									"path": [
+										"{{authEndpoint}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Trace-Id",
+									"value": "1e9bfe830b2a8c8425aa6e123e7e7bfe"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Sep 2025 16:48:20 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "269"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjEyM0Bob3RtYWlsLmNvbSIsImV4cCI6MTc1NzE3NzMwMCwidXNlcl9pZCI6ImZiYjdhMjJkLTdmOWYtNDM5ZC04M2EzLTc2MDFmYzdjNDczYSIsInVzZXJuYW1lIjoiMTIzIn0.SZNiOUbkGf99jnk4NWORps_xftOn2ASbUNpN54XTJNU\",\n    \"token_type\": \"bearer\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "productsHost",
+			"value": "localhost:8081"
+		},
+		{
+			"key": "productsEndpoint",
+			"value": "products"
+		},
+		{
+			"key": "ordersHost",
+			"value": "localhost:8082"
+		},
+		{
+			"key": "ordersEndpoint",
+			"value": "orders"
+		},
+		{
+			"key": "username",
+			"value": "123"
+		},
+		{
+			"key": "password",
+			"value": "123"
+		},
+		{
+			"key": "authEndpoint",
+			"value": "auth/token",
+			"type": "string"
+		},
+		{
+			"key": "authHost",
+			"value": "localhost:8080",
+			"type": "string"
+		}
+	]
+}
