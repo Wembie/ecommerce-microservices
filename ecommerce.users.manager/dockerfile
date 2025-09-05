@@ -20,7 +20,7 @@ RUN go build -buildvcs=false -o /dist/main ./cmd
 
 FROM alpine:3.18
 
-RUN apk add --no-cache tzdata ca-certificates bash
+RUN apk add --no-cache tzdata ca-certificates bash netcat-openbsd
 
 COPY --from=builder /dist/main /main
 COPY --from=builder /usr/share/zoneinfo /usr/share/zoneinfo

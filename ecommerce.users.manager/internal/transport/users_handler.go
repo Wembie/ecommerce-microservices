@@ -12,7 +12,7 @@ import (
 
 func (h PingHandler) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*pb.User, error) {
 	logger := config.CreateLoggerWithTraceID(h.log, ctx)
-	logger.Info("Received CreateUser request", zap.Any("request", req))
+	logger.Info("Received CreateUser request", zap.Any("request", req)) //TODO remove password from logs
 
 	createReq, err := utils.ConvertToCreateUserModel(req)
 	if err != nil {
@@ -64,7 +64,7 @@ func (h PingHandler) GetUser(ctx context.Context, req *pb.GetUserRequest) (*pb.U
 
 func (h PingHandler) UpdateUser(ctx context.Context, req *pb.UpdateUserRequest) (*pb.User, error) {
 	logger := config.CreateLoggerWithTraceID(h.log, ctx)
-	logger.Info("Received UpdateUser request", zap.Any("request", req))
+	logger.Info("Received UpdateUser request", zap.Any("request", req)) //TODO remove password from logs
 
 	updateReq, err := utils.ConvertToUpdateUserModel(req)
 	if err != nil {

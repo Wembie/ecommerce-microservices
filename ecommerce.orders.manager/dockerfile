@@ -26,6 +26,6 @@ COPY --from=builder /dist/main /main
 COPY --from=builder /usr/share/zoneinfo /usr/share/zoneinfo
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 
-EXPOSE 8081
+EXPOSE 8082
 
 ENTRYPOINT ["/main"]
