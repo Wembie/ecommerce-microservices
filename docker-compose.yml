@@ -17,7 +17,6 @@ services:
       POSTGRES_PASSWORD: "app_password"
       POSTGRES_DB: "ecommerce_db"
     ports:
-      #- "5432:5432"
       - "5434:5432"
     volumes:
       - ecommerce-db-data:/var/lib/postgresql/data
@@ -27,6 +26,8 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - ecommerce-network
 
   migrations:
     build:
@@ -37,6 +38,8 @@ services:
     depends_on:
       db:
         condition: service_healthy
+    networks:
+      - ecommerce-network
 
   user-manager:
     build:
@@ -52,34 +55,78 @@ services:
     depends_on:
       migrations:
         condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "nc", "-z", "localhost", "50051"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ecommerce-network
+
+  auth:
+    build:
+      context: ecommerce.auth
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      APP_PORT: "8080"
+      USER_MANAGER_HOST: "user-manager:50051"
+    depends_on:
+      migrations:
+        condition: service_completed_successfully
+      user-manager:
+        condition: service_healthy
+    networks:
+      - ecommerce-network
 
   product-manager:
     build:
       context: ecommerce.products.manager
       dockerfile: Dockerfile
     ports:
-      - "8080:8080"
+      - "8081:8081"
     environment:
       <<: *db-env
       APP_NAME: "products-manager"
-      APP_PORT: "8080"
+      APP_PORT: "8081"
     depends_on:
       migrations:
         condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "nc", "-z", "localhost", "8081"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ecommerce-network
 
-  # order-service:
-  #   build:
-  #     context: ./order-service/ecommerce.orders.manager
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - "8081:8081"
-  #   environment:
-  #     <<: *db-env
-  #     APP_NAME: "orders-manager"
-  #     APP_PORT: "8081"
-  #   depends_on:
-  #     order-migrations:
-  #       condition: service_completed_successfully
+  order-service:
+    build:
+      context: ecommerce.orders.manager
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
+    environment:
+      <<: *db-env
+      APP_NAME: "orders-manager"
+      APP_PORT: "8082"
+      #AUTH_SERVICE_HOST: "auth:8080"
+      USER_MANAGER_HOST: "user-manager:50051"
+      PRODUCT_MANAGER_HOST: "http://product-manager:8081"
+    depends_on:
+      migrations:
+        condition: service_completed_successfully
+      user-manager:
+        condition: service_healthy
+      product-manager:
+        condition: service_healthy
+    networks:
+      - ecommerce-network
 
 volumes:
   ecommerce-db-data:
+
+networks:
+  ecommerce-network:
+    driver: bridge

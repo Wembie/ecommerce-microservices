@@ -1,0 +1,325 @@
+basePath: /
+definitions:
+  docs.ErrorResponse:
+    properties:
+      error:
+        example: Error message describing what went wrong
+        type: string
+    type: object
+  docs.PaginatedResponse:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/ecommerce_orders_manager_internal_models.OrderResponse'
+        type: array
+      next_page:
+        example: 1
+        type: integer
+      page:
+        example: 0
+        type: integer
+      pages:
+        example: 2
+        type: integer
+      previous_page:
+        type: integer
+      size:
+        example: 50
+        type: integer
+      total:
+        example: 100
+        type: integer
+    type: object
+  ecommerce_orders_manager_internal_models.CreateOrderItem:
+    properties:
+      product_id:
+        type: string
+      quantity:
+        type: integer
+    type: object
+  ecommerce_orders_manager_internal_models.CreateOrderRequest:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/ecommerce_orders_manager_internal_models.CreateOrderItem'
+        type: array
+    type: object
+  ecommerce_orders_manager_internal_models.Order:
+    properties:
+      created_at:
+        type: string
+      id:
+        type: string
+      status:
+        type: string
+      total:
+        type: number
+      updated_at:
+        type: string
+      user_id:
+        type: string
+    type: object
+  ecommerce_orders_manager_internal_models.OrderItem:
+    properties:
+      id:
+        type: string
+      order_id:
+        type: string
+      price:
+        type: number
+      product_id:
+        type: string
+      quantity:
+        type: integer
+    type: object
+  ecommerce_orders_manager_internal_models.OrderResponse:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/ecommerce_orders_manager_internal_models.OrderItem'
+        type: array
+      order:
+        $ref: '#/definitions/ecommerce_orders_manager_internal_models.Order'
+    type: object
+  ecommerce_orders_manager_internal_models.TokenResponse:
+    properties:
+      access_token:
+        type: string
+      token_type:
+        type: string
+    type: object
+  ecommerce_orders_manager_internal_models.UpdateOrderStatusRequest:
+    properties:
+      status:
+        type: string
+    type: object
+host: localhost:8082
+info:
+  contact: {}
+  description: Orders Manager service for e-commerce microservices
+  title: Orders Manager API
+  version: "1.0"
+paths:
+  /auth/token:
+    post:
+      consumes:
+      - application/x-www-form-urlencoded
+      description: OAuth2 password flow - exchange username/password for access token
+      parameters:
+      - description: Username
+        in: formData
+        name: username
+        required: true
+        type: string
+      - description: Password
+        in: formData
+        name: password
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/ecommerce_orders_manager_internal_models.TokenResponse'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "401":
+          description: Unauthorized
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get access token
+      tags:
+      - Authentication
+  /orders:
+    post:
+      consumes:
+      - application/json
+      description: Create a new order with items
+      parameters:
+      - description: Order data
+        in: body
+        name: order
+        required: true
+        schema:
+          $ref: '#/definitions/ecommerce_orders_manager_internal_models.CreateOrderRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/ecommerce_orders_manager_internal_models.OrderResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/docs.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/docs.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/docs.ErrorResponse'
+      security:
+      - OAuth2PasswordBearer: []
+      summary: Create a new order
+      tags:
+      - Orders
+  /orders/{id}:
+    get:
+      description: Get order details with items
+      parameters:
+      - description: Order ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/ecommerce_orders_manager_internal_models.OrderResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/docs.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/docs.ErrorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/docs.ErrorResponse'
+      security:
+      - OAuth2PasswordBearer: []
+      summary: Get an order by ID
+      tags:
+      - Orders
+  /orders/{id}/items:
+    get:
+      description: Get all items for a specific order
+      parameters:
+      - description: Order ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/ecommerce_orders_manager_internal_models.OrderItem'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/docs.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/docs.ErrorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/docs.ErrorResponse'
+      security:
+      - OAuth2PasswordBearer: []
+      summary: Get order items
+      tags:
+      - Orders
+  /orders/{id}/status:
+    put:
+      consumes:
+      - application/json
+      description: Update the status of an existing order
+      parameters:
+      - description: Order ID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Status update data
+        in: body
+        name: status
+        required: true
+        schema:
+          $ref: '#/definitions/ecommerce_orders_manager_internal_models.UpdateOrderStatusRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/ecommerce_orders_manager_internal_models.Order'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/docs.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/docs.ErrorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/docs.ErrorResponse'
+      security:
+      - OAuth2PasswordBearer: []
+      summary: Update order status
+      tags:
+      - Orders
+  /orders/user:
+    get:
+      description: Get paginated orders for the authenticated user
+      parameters:
+      - default: 0
+        description: Page number
+        in: query
+        name: page
+        type: integer
+      - default: 50
+        description: Page size
+        in: query
+        name: size
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/docs.PaginatedResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/docs.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/docs.ErrorResponse'
+      security:
+      - OAuth2PasswordBearer: []
+      summary: Get orders for authenticated user
+      tags:
+      - Orders
+securityDefinitions:
+  OAuth2PasswordBearer:
+    flow: password
+    tokenUrl: /auth/token
+    type: oauth2
+swagger: "2.0"
