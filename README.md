@@ -285,12 +285,12 @@ open http://localhost:8082/swagger/index.html
 For easy API testing, Postman collections are available:
 
 #### HTTP REST APIs
-- **Shared Link**: https://.postman.co/workspace/My-Workspace~5d1ca1e6-a626-44eb-8391-51a7b92f8149/collection/68b4764565db39b34814f374?action=share&creator=37797695
+- **Shared Link**: [Open in Postman](https://postman.co/workspace/My-Workspace~5d1ca1e6-a626-44eb-8391-51a7b92f8149/collection/68b4764565db39b34814f374?action=share&creator=37797695)
 - **Local JSON File**: `Ecommerce HTTP.postman_collection.json` (Import this file into Postman)
 
 #### gRPC APIs  
-- **Shared Link**: https://.postman.co/workspace/My-Workspace~5d1ca1e6-a626-44eb-8391-51a7b92f8149/collection/68b4764565db39b34814f374?action=share&creator=37797695
-- **Note**: gRPC collection couldn't be exported as JSON, use the shared link above
+- **Shared Link**: [Open in Postman](https://postman.co/workspace/My-Workspace~5d1ca1e6-a626-44eb-8391-51a7b92f8149/collection/68b4764565db39b34814f374?action=share&creator=37797695)  
+- **Note**: gRPC collection couldn’t be exported as JSON, please use the shared link above
 
 ### 📥 How to Use Postman Collections
 
